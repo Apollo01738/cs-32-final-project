@@ -1,8 +1,4 @@
 # cs-32-final-project
-My CS32 Final Project with Milo and Lillie
-The overall dream was to create a video game, however, with our limited scope and abilities, we have decided to instead create an arcade of games such as hangman, bingo, wheel of fortune, etc. You will collect coins depending on your performance, and the coins can be used to purchase new titles or unlock new games. 
-
-
 FP Design (updated)
 We have decided to modify our original idea for the FP, and create an arcade of games such as hangman, maze, and possibly one other game. Players will collect coins depending on their performance, which can be used to purchase new titles or unlock new games. Additionally, we can add account functionalities so that each user can save their login info, and add visuals to make it more interesting.
 
