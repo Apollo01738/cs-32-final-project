@@ -20,7 +20,7 @@ def BoardInitialize(board):
     print(connectors)
     print(board[6] + "|" + board[7] + "|" + board[8])
 
-# take player input
+
 def Input(board):
     while True:
         playerInput = int(input(f"Please chose a number between 1 and 9: Player {current_player}:"))
@@ -35,7 +35,6 @@ def Input(board):
 
 
 
-#check for win or tie
 def horizontal(board):
     global winner
     if "-" != board[0] == board[1] == board[2]:
@@ -72,14 +71,6 @@ def diagonal(board):
         return True
 
 
-def tie(board):
-    global gameRunning
-    if "-" not in board and checkWin() == False:
-        BoardInitialize(board)
-        print("It's a tie")
-        gameRunning = False
-
-
 
 def changeOpponent():
     global current_player
@@ -87,6 +78,13 @@ def changeOpponent():
         current_player = "O"
     elif current_player == "O":
         current_player = "X"
+
+def tie(board):
+    global gameRunning
+    if "-" not in board and checkWin() == False:
+        BoardInitialize(board)
+        print("It's a tie")
+        gameRunning = False
 
 
 def checkWin():
@@ -111,8 +109,6 @@ def automated(board):
         if board[computer] == "-":
             board[computer] = "O"
             break
-
-
 
 
 
