@@ -22,13 +22,6 @@ def BoardInitialize(board):
 
 # take player input
 def Input(board):
-    '''
-    inp = int(input("Enter a number 1-9: "))
-    if inp >= 1 and inp <= 9 and board[inp-1] == "-":
-        board[inp-1] = currentPlayer
-    else:
-        print("Try another position!")
-    '''
     while True:
         playerInput = int(input(f"Please chose a number between 1 and 9: Player {current_player}:"))
         if playerInput <= 9 and playerInput >= 1 and board[playerInput-1] == "-":
