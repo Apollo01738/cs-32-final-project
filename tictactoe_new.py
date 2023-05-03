@@ -114,9 +114,9 @@ def checkWin():
 def automated(board):
     global current_player
     while current_player == "O":
-        position = random.randint(0, 8)
-        if board[position] == "-":
-            board[position] = "O"
+        computer = random.randint(0, 8)
+        if board[computer] == "-":
+            board[computer] = "O"
             break
 
 
@@ -150,23 +150,6 @@ def endgame():
     return replay
 
 
-'''
-def endgame():
-    global gameboard
-    if RunningGame == False:
-        gameboard = ["-", "-", "-",
-                    "-", "-", "-",
-                    "-", "-", "-"]
-        print('1. Play again')
-        print('2. return to main menu')
-        hangman_option = input('Enter your selection:')
-        if hangman_option == "1":
-            tictactoe_main()
-        #else:
-            #main()
-
-'''
-
 
 def tictactoe_main1():
     global gameRunning
@@ -192,43 +175,3 @@ if __name__ == '__main__':
     tictactoe_main1()
     
 
-'''
-
-# take player input and put it onto the board
-def firstplayerInput(board):
-    global RunningGame
-    global currentplayer
-    while True:
-        playerInput = int(input(f"Please chose a number between 1 and 9: Player {currentplayer}:"))
-        if playerInput <= 9 and playerInput >= 1 and board[playerInput-1] == "-":
-            board[playerInput-1] = currentplayer
-            break
-
-        elif playerInput >= 9 or playerInput <= 1:
-            print("Please input a number between 1 and 9")
-        elif board[playerInput-1] != "-":
-            print("Someone has already chosen that spot! Please pick a different number between 1 and 9")
-
-
-def tictactoe_main():
-    global RunningGame
-    global currentplayer
-    RunningGame = True
-    while RunningGame:
-        BoardInitialize(gameboard)
-        firstplayerInput(gameboard)
-        vertical(gameboard)
-        horizontal(gameboard)
-        diagonal(gameboard)
-        tie(gameboard)
-        changeOpponent()
-        automated(gameboard)
-        changeOpponent()
-        
-    endgame()
-    
-    
-    BoardInitialize(gameboard)
-
-
-'''
